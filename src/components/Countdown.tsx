@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import styles from "../styles/components/Countdown.module.css";
+import { AiFillCheckCircle } from 'react-icons/ai';
 
 let countDownTimeout: NodeJS.Timeout;
 
@@ -51,7 +52,7 @@ export function Countdown() {
 
       {hasFinished ? (
         <button disabled className={styles.startCountdownButton}>
-          Ciclo encerrado
+          Ciclo encerrado  <AiFillCheckCircle style={{color: '#4cd62b', marginLeft: '5px'}}/>
         </button>
       ) : (
         <>
